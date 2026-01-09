@@ -107,7 +107,7 @@ export const generateFollowUpQuestion = async (
     try {
         const ai = getAiClient();
         const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
+            model: 'gemini-3-pro-preview',
             contents: prompt,
             config: {
                 responseMimeType: 'application/json',
@@ -158,7 +158,7 @@ export const generateBuilderRequests = async (
   try {
     const ai = getAiClient();
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3-pro-preview',
       contents: prompt,
     });
     return response.text.replace(/\*\*/g, '');
@@ -192,7 +192,7 @@ export const generateContinuingChat = async (
   try {
     const ai = getAiClient();
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3-pro-preview',
       contents: prompt,
     });
     return response.text;
